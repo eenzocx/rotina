@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Rotina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "left center right";
+            grid-template-columns: 1fr 2fr 1fr;
+            background-color: #ffffff;
+            border: 2px solid #00aaff;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #008cba;
+        }
+        .header div {
+            text-align: center;
+            font-weight: bold;
+            color: #008cba;
+        }
+        .box {
+            background-color: #00aaff;
+            color: #ffffff;
+            border: 2px solid #000000;
+            padding: 10px;
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .left, .right {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .center {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-left: 2px solid #00aaff;
+            border-right: 2px solid #00aaff;
+        }
+        .tasks, .done {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>TERAPEUTA</div>
+            <div class="title">ROTINA</div>
+            <div>PACIENTE</div>
+        </div>
+        <div class="left">
+            <div>Hoje é:</div>
+            <div class="box">Dia</div>
+            <div class="box">Mês</div>
+            <div class="box">Ano</div>
+        </div>
+        <div class="center">
+            <div class="tasks">
+                <div>Vamos Fazer!</div>
+                <div class="box">Tarefa 1</div>
+                <div class="box">Tarefa 2</div>
+                <div class="box">Tarefa 3</div>
+                <div class="box">Tarefa 4</div>
+            </div>
+            <div class="done">
+                <div>Feito</div>
+                <div class="box">Tarefa 1</div>
+                <div class="box">Tarefa 2</div>
+                <div class="box">Tarefa 3</div>
+                <div class="box">Tarefa 4</div>
+                <div class="box">Tarefa 5</div>
+            </div>
+        </div>
+        <div class="right">
+            <div>Terapeuta:</div>
+            <div class="box">Nome</div>
+        </div>
+    </div>
+</body>
+</html>
